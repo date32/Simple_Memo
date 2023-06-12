@@ -57,16 +57,16 @@ Route::middleware('auth')->group(function() {
 });
 
 
-// Route::get('/m',[MemoController::class, 'index'])->middleware('auth')->name('index');
-// Route::get('/m',[MemoController::class, 'index'])->name('index');
-// Route::post('/memo/store',[MemoController::class, 'store']);
-// Route::post('/memo/delete/{id}',[MemoController::class, 'delete']);
-// Route::post('/memo/update/{id}',[MemoController::class, 'update']);
+Route::get('/m',[MemoController::class, 'index'])->middleware('auth')->name('index');
+Route::get('/m',[MemoController::class, 'index'])->name('index');
+Route::post('/memo/store',[MemoController::class, 'store']);
+Route::post('/memo/delete/{id}',[MemoController::class, 'delete']);
+Route::post('/memo/update/{id}',[MemoController::class, 'update']);
 
-// Route::get('/me',[MemoController::class, 'welcome'])->name('welcome');
-// Route::get('/memo/login',[MemoController::class, 'login']);
-// Route::get('/memo/register',[MemoController::class, 'register']);
-// Route::get('/memo/logout',[MemoController::class, 'logout']);
+Route::get('/me',[MemoController::class, 'welcome'])->name('welcome');
+Route::get('/memo/login',[MemoController::class, 'login']);
+Route::get('/memo/register',[MemoController::class, 'register']);
+Route::get('/memo/logout',[MemoController::class, 'logout']);
 
 
 Route::get('/test',[TestController::class, 'index']);
